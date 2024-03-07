@@ -7,24 +7,25 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigManager {
-    private static final Logger LOGGER = LogManager.getLogger(ConfigManager.class);
 
-    private static final Properties properties = new Properties();
+	private static final Logger LOGGER = LogManager.getLogger(ConfigManager.class);
 
-    static {
-        try (InputStream inputStream = ConfigManager.class.getClassLoader()
-                .getResourceAsStream("application.properties")) {
-            properties.load(inputStream);
-            LOGGER.info("Application properties loaded successfully.");
+	private static final Properties properties = new Properties();
 
-        } catch (Exception ex) {
-            LOGGER.error("Could not load application properties.", ex);
-        }
-    }
+	static {
+		try (InputStream inputStream = ConfigManager.class.getClassLoader()
+			.getResourceAsStream("application.properties")) {
+			properties.load(inputStream);
+			LOGGER.info("Application properties loaded successfully.");
 
-    public static String getProperty(String key) {
-        return properties.getProperty(key);
-    }
+		}
+		catch (Exception ex) {
+			LOGGER.error("Could not load application properties.", ex);
+		}
+	}
 
+	public static String getProperty(String key) {
+		return properties.getProperty(key);
+	}
 
 }

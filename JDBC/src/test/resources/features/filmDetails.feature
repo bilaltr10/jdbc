@@ -1,4 +1,4 @@
-@db
+@filmDetails @db
 Feature: Film table automation features
 
   Scenario: Get a list of all films
@@ -21,7 +21,7 @@ Feature: Film table automation features
       | Hard       |
 
 
-  Scenario Outline:Get films' title and description by their ID in order of ascending
+  Scenario Outline:Get films' title and description by their ID
     Given the film service is up and running
     When I request title and description of films by IDs '<film_id>'
     Then I should receive the title '<film_id>' and description '<title>' of the film with ID '<description>'
