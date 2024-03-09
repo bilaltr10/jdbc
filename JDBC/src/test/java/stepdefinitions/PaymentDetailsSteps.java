@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
 import org.database_test_automation.model.PaymentDetails;
 import org.database_test_automation.service.PaymentDetailsService;
-
 import java.util.List;
 
 public class PaymentDetailsSteps {

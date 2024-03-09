@@ -3,17 +3,13 @@ package stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.sl.In;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
-import org.assertj.core.api.SoftAssertionError;
 import org.assertj.core.api.SoftAssertions;
 import org.database_test_automation.model.FilmDetails;
 import org.database_test_automation.service.FilmDetailsService;
-
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FilmDetailsStepDefs {
